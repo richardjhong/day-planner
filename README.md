@@ -1,5 +1,7 @@
 # Day Planner
 
+![day-planner.gif](./assets/images/screen_recording.gif)
+
 ## Technologies used
 This project uses [Bootstrap](https://getbootstrap.com/) for the frontend toolkit, [jQuery](https://jquery.com/) for manipulating the HTML document, and the [moment.js](https://momentjs.com/) library for time formatting. 
 
@@ -15,7 +17,7 @@ Most of the project html was built dynamically via appending divs (some with Boo
 
 To get the foundation for the project, I used moment.js to grab the current time hours and also the current time with day, month, and year to display on the page. The time hours will be used again later on.
 
-The block of code prior to the for loop creates the first row which corresponds to the 00th/24th hour i.e. midnight. In particular there is a hourColumnContainer, a textColumnContainer, and a saveButtonColumnContainer, with ratios of 2:8:2 respectively. Divs are appended to parents sequentially. The if statement within line 27-29 of script.js checks if there is/are any event(s) corresponding with the 12AM - 1 AM time slot; If so the textColumn will be prefilled with the previously stored events. Essentially if this were to be coded within HTML, it would resemble the following:
+The block of code prior to the for loop creates the first row which corresponds to the 00th/24th hour i.e. midnight. In particular there is an hourColumnContainer, a textColumnContainer, and a saveButtonColumnContainer, with ratios of 2:8:2 respectively. Divs are appended to parents sequentially. The if statement within line 27-29 of script.js checks if there is/are any event(s) corresponding with the 12AM - 1 AM time slot; If so the textColumn will be prefilled with the previously stored events. Essentially if this were to be coded within HTML, it would resemble the following:
 
 ```
 ...
@@ -52,6 +54,7 @@ Next, each slotContainer checks each time slot and compares against the current 
 Finally, using the bind method within jQuery for event delegation, the program listens for clicks on saveButton. Here, localStorage is used to grab prior events, merge with any new events, and store the combination for future use. Ultimately this leads to persistent data even if the user refreshes the page (so long as he/she clicks the save button).
 
 ## Screenshot
+![screenshot](./assets/images/screenshot.png)
 
 ## Thoughts on improvement
 While Bootstrap is great for responsive design, I didn't focus on doing so for this project. This would be one improvement to make for the future. Another limitation to consider is that even though events are stored within localStorage, the same data is referred to regardless of day i.e. storing events one day and then opening the page/app the next will have the same prefilled events. This can also be improved with a check if the current day displayed matches some type of key within the localStorage.
