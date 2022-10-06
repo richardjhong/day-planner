@@ -9,7 +9,7 @@ This project uses [Bootstrap](https://getbootstrap.com/) for the frontend toolki
 This project was made with the technologies listed above to create familiarity with the different libraries that can be used with vanilla JavaScript for more robust code implementation.
 
 ## Description
-The app allows a user to view the current day and enter tasks to plan his or her day. Middle columns where tasks are stored are color coded according to if the time hour has already passed, is ongoing, or is in the future. Clicking the floppy disk icon or the surrounding button card will save the information which persists even if the user refreshes the page. 
+The app allows a user to view the current day and enter events to plan his or her day. Middle columns where events are stored are color coded according to if the time hour has already passed, is ongoing, or is in the future. Clicking the floppy disk icon or the surrounding button card will save the information which persists even if the user refreshes the page. 
 
 
 ## Architecture
