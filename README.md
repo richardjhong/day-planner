@@ -17,7 +17,11 @@ Most of the project html was built dynamically via appending divs (some with Boo
 
 To get the foundation for the project, I used moment.js to grab the current time hours and also the current time with day, month, and year to display on the page. The time hours will be used again later on.
 
-The block of code prior to the for loop creates the first row which corresponds to the 00th/24th hour i.e. midnight. In particular there is an hourColumnContainer, a textColumnContainer, and a saveButtonColumnContainer, with ratios of 2:8:2 respectively. Divs are appended to parents sequentially. The if statement within line 27-29 of script.js checks if there is/are any event(s) corresponding with the 12AM - 1 AM time slot; If so the textColumn will be prefilled with the previously stored events. Essentially if this were to be coded within HTML, it would resemble the following:
+The block of code prior to the for loop creates the first row which corresponds to the 00th/24th hour i.e. midnight. In particular there is an hourColumnContainer, a textColumnContainer, and a saveButtonColumnContainer, with ratios of 2:8:2 respectively. Divs are appended to parents sequentially. The if statement within line 27-29 of script.js checks if there is/are any event(s) corresponding with the 12AM - 1 AM time slot; If so the textColumn will be prefilled with the previously stored events. 
+
+From there, a loop is used to create 23 more time rows with divs in their respective parents' containers. Line 34 in particular uses the jQuery before method to prepend to a clone of the slotContainer made for the 00th hour slot. An if statement checks to see if there is/are any event(s) corresponding to respective time hours or resets the value to an empty string to not accidentally copy a previous time slot's events to a "free" time slot later on.
+
+Essentially if this were to be coded within HTML, it would resemble the following:
 
 ```
 ...
@@ -47,7 +51,6 @@ The block of code prior to the for loop creates the first row which corresponds 
   </div>
 </div>
 ```
-From there, a loop is used to create 23 more time rows with divs in their respective parents' containers. Line 34 in particular uses the jQuery before method to prepend to a clone of the slotContainer made for the 00th hour slot. An if statement checks to see if there is/are any event(s) corresponding to respective time hours or resets the value to an empty string to not accidentally copy a previous time slot's events to a "free" time slot later on.
 
 Next, each slotContainer checks each time slot and compares against the current time; if it's prior to the current time, then a grey background is used for the textContainer. If it's the current time hour, then the background is red, and finally future time slots are color coded as green.
 
