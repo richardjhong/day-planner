@@ -2,7 +2,7 @@
 
 ![day-planner.gif](./assets/images/screen_recording.gif)
 
-## Technologies used
+## Technologies
 This project uses [Bootstrap](https://getbootstrap.com/) for the frontend toolkit, [jQuery](https://jquery.com/) for manipulating the HTML document, and the [moment.js](https://momentjs.com/) library for time formatting. 
 
 ## Purpose
@@ -55,6 +55,9 @@ Finally, using the bind method within jQuery for event delegation, the program l
 
 ## Screenshot
 ![screenshot](./assets/images/screenshot.png)
+
+## Livesite
+[Deployed on Github page](https://richardjhong.github.io/day-planner/)
 
 ## Thoughts on improvement
 While Bootstrap is great for responsive design, I didn't focus on doing so for this project. This would be one improvement to make for the future. Another limitation to consider is that even though events are stored within localStorage, the same data is referred to regardless of day i.e. storing events one day and then opening the page/app the next will have the same prefilled events. This can also be improved with a check if the current day displayed matches some type of key within the localStorage.
