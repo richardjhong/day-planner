@@ -25,7 +25,6 @@ saveButtonColumnContainer.append(saveButtonCard)
 saveButtonCard.append('<i class="fa-solid fa-floppy-disk mx-4"></i>')
 textCard.append(textInput)
 if (locallyStoredDays !== null && locallyStoredDays[0] !== undefined) {
-  console.log('this is promising: ', locallyStoredDays[0].join(','))
   textInput.val(locallyStoredDays[0].join(','))
 }
 
@@ -50,8 +49,6 @@ for (let i = 1; i < 24; i++) {
 }
 
 var hourCards = $('.hour')
-
-console.log('hourCards', hourCards)
 
 hourCards.each(hour => {
   var currentCardHours = hourCards[hour].text
